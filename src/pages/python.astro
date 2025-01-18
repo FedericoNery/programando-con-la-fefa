@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import { render } from 'astro:content';
+import BlogPost from '../layouts/BlogPost.astro';
+
+type Props = CollectionEntry<'python'>;
+
+const posts = await getCollection('python')
+console.log(posts)
+
+const { Content: ContentImperativa } = await render(posts[0]);
+const { Content: ContentProgramacionOrientadaAObjetos } = await render(posts[1]);
+---
+
+<Layout
+	title="Cursos de Python"
+	description="Cursos para aprender programación imperativa y orientada a objetos"
+	pubDate={new Date('January 18 2025')}
+	heroImage="/blog-placeholder-python.jpg"
+    heroWidth={800}
+    heroHeight={400}
+>
+	<p>
+		El objetivo principal de estos dos cursos es el de enseñar las herramientas que van a servir como pilares para que el alumno pueda aprender a resolver problemas.
+        Estos problemas, forzarán al alumno a que piense la solución y a que tenga sentido crítico, si la problemática a resolver no está completamente definida.
+	</p>
+
+    <ContentImperativa />
+    <ContentProgramacionOrientadaAObjetos />
+
+
+</Layout>
