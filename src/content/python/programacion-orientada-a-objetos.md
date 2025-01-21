@@ -1,8 +1,56 @@
 ---
-title: 'First post'
+title: 'Programación Orientada a Objetos'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 08 2022'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+# Programación Orientada a Objetos
+
+## Contenido
+
+### Repaso
+
+La presentación de repaso se encuentra disponible acá [Presentación o Machete](https://docs.google.com/presentation/d/1KLT3hNdyEvBjtdzKTzgodHxv-vCZ64NvnfKFGqAdBrg/edit?usp=drive_link)
+
+1. [Ejercicios de lectura de código](https://docs.google.com/document/d/1JxYAYQ0PWcp7invMeFq_itVS8cnfFpsYHNCxQlucC14/edit?usp=sharing).
+
+2. [Ejercicios condicionales y ciclos](https://docs.google.com/document/d/1bdYylwvMtuTB4sqGtcgg_FJFh30IpeQrZrUxDPwjQJY/edit?usp=drive_link)
+
+3. [Guia de ejercicios](https://docs.google.com/document/d/1u8GZyj3OW-sHsCMCZ_krbLtDA_eXPNh3cT2XsG1uouY/edit?usp=drive_link)
+
+### Clases y objetos
+
+[Presentación o Machete](https://docs.google.com/presentation/d/1KCKFjDhpqwoIiFvGSDSCF31JF5_qYNv2aKqHOb7Y0Ak/edit?usp=drive_link)
+
+[Guia de ejercicios](https://docs.google.com/document/d/1BFjIM4ZuOfxZMbaAaBboQicL6s4bpeJs6BZBXiwi0Io/edit?usp=sharing)
+
+### Atributos, Métodos y Mensajes
+
+[Teoría de POO - Alan Kay](https://docs.google.com/presentation/d/1RhifTkvv5HdVLp9OWjjV3eO4xHqdfxDz9qCi_CCDgzE/edit?usp=sharing)
+
+[Métodos y atributos de clase](https://docs.google.com/presentation/d/1Np3Gl_-_UFvkLAWF6ZiYudvjATBXgkwl248juXiBO_8/edit?usp=sharing)
+
+[Encapsulamiento](https://docs.google.com/presentation/d/19juNEzN-HFRGL-3nV9zGpagIR0mLb9qn-JCe-ydPu50/edit?usp=sharing)
+
+
+
+### Herencia
+
+[Presentación](https://docs.google.com/presentation/d/1Rb77isfIaKjjdcW5vkHIuQG_uasorWyA4ysfGGh1-j4/edit?usp=drive_link)
+
+[Guía de ejercicios](https://docs.google.com/document/d/1bWPSZmJrBgu1igfMKu9My7CDIB0bo_xIS9XTx_Li-wM/edit?usp=drive_link)
+
+
+### Herencia Múltiple
+
+[Presentación](https://docs.google.com/presentation/d/1R1X1yjsXFYNXNreckmmGGQZT90vBPsT1nl2Rnp5zeXs/edit?usp=drive_link)
+
+[Especialización, Generalización y Composición](https://docs.google.com/presentation/d/1FDcZZ3Cy9CqQqQnAhhjCwhzHZ-HyGCLIwoMKFv12kr4/edit?usp=drive_link)
+
+### Clases Abstractas
+
+[Presentación](https://docs.google.com/presentation/d/1F7K9fCqmxILOgpmphI3v9NqXSKpqX8ZBrsXxFsrNLes/edit?usp=sharing)
+
+[Guía de ejercicios](https://docs.google.com/document/d/1AyDGKxE72beweTJCHBvV5RzNkYdDtR4U9BIdLiY0zhY/edit?usp=drive_link)
+
