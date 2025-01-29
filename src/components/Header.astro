@@ -1,6 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import ThemeToggleButton from './ThemeToggleButton.astro';
 ---
 
 <header>
@@ -11,6 +12,9 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/programando-con-la-fefa/blog">Blog</HeaderLink>
 			<HeaderLink href="/programando-con-la-fefa/about">About</HeaderLink>
 			<HeaderLink href="/programando-con-la-fefa/python">Cursos de Python</HeaderLink>
+		</div>
+		<div class="action-buttons">
+			<ThemeToggleButton />
 		</div>
 		<div class="social-links">
 			<a href="https://github.com/fedenery" target="_blank">
