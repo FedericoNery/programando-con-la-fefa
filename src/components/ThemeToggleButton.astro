@@ -21,19 +21,24 @@
   #themeToggle {
     border: 0;
     background: none;
+    padding: 6px;
+    border-radius: 100%;
+  }
+  #themeToggle:hover{
+    background-color: rgba(0,0,0, 10%);
   }
   .sun {
-    fill: black;
+    fill: var(--accent);
   }
   .moon {
     fill: transparent;
   }
 
-  :global(.dark) .sun {
+  :global(.dark-mode) .sun {
     fill: transparent;
   }
-  :global(.dark) .moon {
-    fill: black;
+  :global(.dark-mode) .moon {
+    fill: var(--accent);
   }
 </style>
 

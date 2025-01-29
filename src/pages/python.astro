@@ -7,7 +7,6 @@ import BlogPost from '../layouts/BlogPost.astro';
 type Props = CollectionEntry<'python'>;
 
 const posts = await getCollection('python')
-console.log(posts)
 
 const { Content: ContentImperativa } = await render(posts[0]);
 const { Content: ContentProgramacionOrientadaAObjetos } = await render(posts[1]);

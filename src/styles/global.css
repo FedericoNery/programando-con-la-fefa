@@ -20,7 +20,6 @@ PURPLE NIGHT
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 
@@ -34,22 +33,33 @@ PURPLE NIGHT
 	
 	--background-gradient: var(--background-color), #fff;
 	--underline-color: var(--gray-light);
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--header-shadow-color: var(--black);
+
+	--hover-color: #1A003C;
 
 }
 
 :root.dark-mode {
+	--white: 238, 243, 251;
+	--gray-dark: 34, 41, 57;
+
 	--background-color: #1c204f;
 	--primary: #a85d9b;
 	--secondary: #f6b6d3;
-	--text-color: #f4deb3;
-	--accent: #a85d9b;
+	/* --accent: #a85d9b; */
+	--accent: #f4deb3;
+	--text-color: #f6b6d3;
+	
 
 	--background-gradient: var(--background-color), #000;
 	--underline-color: var(--gray-dark);
 
 	--gray-gradient: #fff, rgba(var(--gray-light), 50%);
+	--gray-gradient:  #000, rgba(var(--gray-dark), 50%);
+	--header-shadow-color: var(--white);
 
-
+	--hover-color: #864E69;
   }
 
 

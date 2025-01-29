@@ -6,11 +6,11 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a href="/programando-con-la-fefa">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/programando-con-la-fefa">Home</HeaderLink>
+			<HeaderLink href="/programando-con-la-fefa">Inicio</HeaderLink>
 			<HeaderLink href="/programando-con-la-fefa/blog">Blog</HeaderLink>
-			<HeaderLink href="/programando-con-la-fefa/about">About</HeaderLink>
+			<HeaderLink href="/programando-con-la-fefa/about">Acerca de mi</HeaderLink>
 			<HeaderLink href="/programando-con-la-fefa/python">Cursos de Python</HeaderLink>
 		</div>
 		<div class="action-buttons">
@@ -33,8 +33,7 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		box-shadow: 0 2px 8px rgba(var(--header-shadow-color), 20%);
 	}
 	h2 {
 		margin: 0;
@@ -52,7 +51,7 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: var(--accent);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
@@ -60,6 +59,7 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+	.action-buttons,
 	.social-links,
 	.social-links a {
 		display: flex;
