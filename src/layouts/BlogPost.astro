@@ -49,6 +49,7 @@ const { title, description, pubDate, updatedDate, heroImage, heroWidth = 1020, h
 				color: rgb(var(--gray));
 			}
 			.last-updated-on {
+				margin-top: 0.5em;
 				font-style: italic;
 			}
 		</style>
@@ -64,11 +65,11 @@ const { title, description, pubDate, updatedDate, heroImage, heroWidth = 1020, h
 				<div class="prose">
 					<div class="title">
 						<div class="date">
-							<FormattedDate date={pubDate} />
+							Publicado: <FormattedDate date={pubDate} />
 							{
 								updatedDate && (
 									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+										Última actualización: <strong><FormattedDate date={updatedDate} /></strong>
 									</div>
 								)
 							}
