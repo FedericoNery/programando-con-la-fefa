@@ -1,33 +1,53 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-import { type CollectionEntry, getCollection } from 'astro:content';
-import { render } from 'astro:content';
-import BlogPost from '../layouts/BlogPost.astro';
+import Layout from "../layouts/BlogPost.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import { render } from "astro:content";
+import BlogPost from "../layouts/BlogPost.astro";
+import BlogPostPreview from "../components/BlogPostPreview.astro";
 
-type Props = CollectionEntry<'python'>;
+type Props = CollectionEntry<"python">;
 
-const posts = await getCollection('python')
+const posts = await getCollection("python");
 
 const { Content: ContentImperativa } = await render(posts[0]);
-const { Content: ContentProgramacionOrientadaAObjetos } = await render(posts[1]);
+const { Content: ContentProgramacionOrientadaAObjetos } = await render(
+  posts[1]
+);
 ---
 
 <Layout
-	title="Cursos de Python"
-	description="Cursos para aprender programación imperativa y orientada a objetos"
-	pubDate={new Date('January 18 2025')}
-	updatedDate={new Date('January 29 2025')}
-	heroImage="/programando-con-la-fefa/blog-placeholder-python.jpg"
-    heroWidth={800}
-    heroHeight={400}
+  title="Cursos de Python"
+  description="Cursos para aprender programación imperativa y orientada a objetos"
+  pubDate={new Date("January 18 2025")}
+  updatedDate={new Date("January 29 2025")}
+  heroImage="/programando-con-la-fefa/blog-placeholder-python.jpg"
+  heroWidth={400}
+  heroHeight={200}
+  hideImage={true}
 >
-	<p>
-		El objetivo principal de estos dos cursos es el de enseñar las herramientas que van a servir como pilares para que el alumno pueda aprender a resolver problemas.
-        Estos problemas, forzarán al alumno a que piense la solución y a que tenga sentido crítico, si la problemática a resolver no está completamente definida.
-	</p>
+  <p>
+    El objetivo principal de estos dos cursos es el de enseñar las herramientas
+    que van a servir como pilares para que el alumno pueda aprender a resolver
+    problemas. Estos problemas, forzarán al alumno a que piense la solución y a
+    que tenga sentido crítico, si la problemática a resolver no está
+    completamente definida.
+  </p>
 
-    <ContentImperativa />
-    <ContentProgramacionOrientadaAObjetos />
-
-
+  <div class="container">
+    <BlogPostPreview post={posts[1]} baseHref="/python"/>
+    <BlogPostPreview post={posts[0]} baseHref="/python"/>
+  </div>
+  <!-- <ContentImperativa />
+    <ContentProgramacionOrientadaAObjetos /> -->
 </Layout>
+
+<style>
+	.container{
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		@media (max-width: 720px) {
+			flex-wrap: wrap;
+		}
+	}
+</style>

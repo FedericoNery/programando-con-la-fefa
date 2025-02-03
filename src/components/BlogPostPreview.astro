@@ -1,0 +1,27 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+const { post, baseHref = "/blog" } = Astro.props;
+
+const href = `${baseHref}/${post.id}/`
+---
+
+<a href={href}>
+  <img src={post.data.heroImage} alt="" />
+  <h4 class="title">{post.data.title}</h4>
+  <p class="date">
+    <FormattedDate date={post.data.pubDate} />
+  </p>
+</a>
+
+<style>
+  a {
+    width: auto;    
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+</style>

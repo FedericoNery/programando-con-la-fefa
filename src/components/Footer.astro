@@ -5,7 +5,7 @@ const today = new Date();
 <footer>
 	&copy; {today.getFullYear()} Federico Nery. Todos los derechos reservados.
 	<div class="social-links">
-		<a href="https://github.com/fedenery" target="_blank">
+		<a href="https://github.com/FedericoNery" target="_blank">
 			<span class="sr-only">Repositorio de Github de Federico Nery</span>
 			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" astro-icon="social/github"
 				><path
@@ -21,7 +21,13 @@ const today = new Date();
 		padding: 2em 1em 2em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		text-align: center;
-		color: var(--text-color)
+		color: var(--text-color);
+		bottom: 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 	}
 	.social-links {
 		display: flex;

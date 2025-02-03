@@ -1,8 +1,8 @@
 ---
 title: 'Programación Orientada a Objetos'
-description: 'Lorem ipsum dolor sit amet'
+description: 'Programación Orientada a Objetos'
 pubDate: 'Jul 08 2022'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: '/programando-con-la-fefa/blog-placeholder-3.jpg'
 ---
 
 # Programación Orientada a Objetos

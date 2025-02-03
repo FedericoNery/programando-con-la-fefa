@@ -14,6 +14,7 @@ const blog = defineCollection({
 		heroImage: z.string().optional(),
 		heroWidth: z.number().optional(),
 		heroHeight: z.number().optional(),
+		hideImage: z.boolean().optional(),
 	}),
 });
 
@@ -30,6 +31,7 @@ const python = defineCollection({
 		heroImage: z.string().optional(),
 		heroWidth: z.number().optional(),
 		heroHeight: z.number().optional(),
+		hideImage: z.boolean().optional(),
 	}),
 });
 

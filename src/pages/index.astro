@@ -1,51 +1,42 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<base href="/programando-con-la-fefa" />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <base href="/programando-con-la-fefa" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Hola Programador 👨‍💻 o Programadora 👩‍💻</h1>
+      <p>
+        Este es mi blog de programación donde voy a compartir material que
+        recopile y que edité a lo largo de mi carrera como programador y como
+        profesor. El material creado puede ser utilizado tanto por alumnos como
+        por profesores, considero que hoy en día hay muchisima información sobre
+        programación, pero también creo que falta cierto orden para recopilar
+        ese material, subdividido en temas, con ejercicios específicos por tema
+        y que sea amigable tanto para el alumno como para el profesor al momento
+        de leer por su cuenta. Este material es <strong>libre y gratuito</strong
+        >, es para vos y para cualquier interesado. Si tenés alguna sugerencia u
+        observación sobre el material, algún tema o tecnología que quieras que
+        aborde, no dudes en contactarme por mail a:
+        <code><strong>fedegnery@gmail.com</strong> </code>
+      </p>
+    </main>
+    <Footer />
+  </body>
 </html>
+
+<style>
+  body {
+	display: flex;
+	flex-direction: column;
+  }
+</style>
