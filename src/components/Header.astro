@@ -50,9 +50,16 @@ import ThemeToggleButton from "./ThemeToggleButton.astro";
     text-decoration: none;
   }
   nav {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
+
+	@media (max-width: 720px) {
+		display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+	}
   }
   nav a {
     padding: 1em 0.5em;

@@ -1,9 +1,8 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
-import BlogPost from "../layouts/BlogPost.astro";
-import BlogPostPreview from "../components/BlogPostPreview.astro";
+import BlogPostPreview from "../../components/BlogPostPreview.astro";
+import BlogPost from "../../layouts/BlogPost.astro";
 
 type Props = CollectionEntry<"python">;
 
@@ -15,7 +14,7 @@ const { Content: ContentProgramacionOrientadaAObjetos } = await render(
 );
 ---
 
-<Layout
+<BlogPost
   title="Cursos de Python"
   description="Cursos para aprender programación imperativa y orientada a objetos"
   pubDate={new Date("January 18 2025")}
@@ -39,7 +38,7 @@ const { Content: ContentProgramacionOrientadaAObjetos } = await render(
   </div>
   <!-- <ContentImperativa />
     <ContentProgramacionOrientadaAObjetos /> -->
-</Layout>
+</BlogPost>
 
 <style>
 	.container{

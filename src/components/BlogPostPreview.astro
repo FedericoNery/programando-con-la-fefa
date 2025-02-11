@@ -3,7 +3,7 @@ import FormattedDate from "./FormattedDate.astro";
 
 const { post, baseHref = "/blog" } = Astro.props;
 
-const href = `${baseHref}/${post.id}/`
+const href = `/programando-con-la-fefa${baseHref}/${post.id}`
 ---
 
 <a href={href}>

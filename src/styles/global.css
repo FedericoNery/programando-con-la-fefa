@@ -78,7 +78,9 @@ PURPLE NIGHT
 	font-display: swap;
 }
 html{
-	height: 100%;
+	height: auto;
+	background: linear-gradient(var(--background-gradient)) no-repeat;
+	background-size: 100%;
 }
 body {
 	font-family: 'Reddit Mono', serif;
@@ -86,8 +88,7 @@ body {
 	padding: 0;
 	text-align: left;
 	/*background: linear-gradient(var(--gray-gradient)) no-repeat;*/
-	background: linear-gradient(var(--background-gradient)) no-repeat;
-	background-size: 100%;
+	
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
