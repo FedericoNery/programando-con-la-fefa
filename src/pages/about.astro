@@ -3,6 +3,24 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+function calcularEdad(fechaNacimiento) {
+    const fechaNac = new Date(fechaNacimiento);
+    const hoy = new Date();
+    
+    let edad = hoy.getFullYear() - fechaNac.getFullYear();
+    const mes = hoy.getMonth() - fechaNac.getMonth();
+    const dia = hoy.getDate() - fechaNac.getDate();
+    
+    if (mes < 0 || (mes === 0 && dia < 0)) {
+        edad--;
+    }
+    
+    return edad;
+}
+
+const fechaNacimiento = "1997-10-22"; 
+const cantidadAños = calcularEdad(fechaNacimiento)
 ---
 
 <!doctype html>
@@ -16,20 +34,17 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     <main>
       <h1>Acerca de mi</h1>
       <div class="container">
+        <img src="/programando-con-la-fefa/about-me1.jpg" alt="Federico Nery en su viaje a España posando con una armadura de caballero decorada con Halloween" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae
-          ultricies leo integer malesuada nunc vel risus commodo viverra.
-          Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis
-          eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum.
-          Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis
-          egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum
-          lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-          dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi.
-          Dictumst quisque sagittis purus sit amet.
+          Hola, soy Federico, tengo {cantidadAños} años.
+          Soy desarrollador FullStack hace aproximadamente {new Date().getFullYear() - 2019} años y 
+          también fui profesor (Técnicas de Programación y Programación Orientada a Objetos) durante 3 años en CFP/Secundaria.
+          El objetivo de haber hecho este blog, es el de compartir todos mis conocimientos y mis experiencias, como así también compartirles todo mi material recopilado y editado, 
+          para que puedan usarlo y compartirlo.
+          Actualmente trabajo como desarrollador Frontend y es el área donde me especializo, con React y NextJS.
+          Pero también he trabajado y aprendido por mi cuenta, distintas tecnologías, tales como: Flutter, Astro, NestJS, .Net, Flask, Socket IO, etc.
+          Acá vas a encontrar guías de ejercicios, presentaciones y apuntes, también distintas plantillas de código o "gist" para implementar proyectos desde cero.
         </p>
-
-        <img src="/programando-con-la-fefa/about-me1.jpg" alt="" />
       </div>
     </main>
     <Footer />
@@ -39,6 +54,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 <style>
   html {
     height: auto;
+    @media (max-width: 720px) {
+      height: 100%;
+    }
   }
   body {
     height: 100%;
@@ -47,8 +65,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
   }
 
   img {
+    float: left;
+    margin-right: 15px;
     height: 720px;
-
     @media (max-width: 720px) {
       display: none;
     }
@@ -58,19 +77,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     display: flex;
     flex-direction: column;
   }
-  .container {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-	align-items: flex-start;
-  }
-
   h1 {
     text-align: center;
     margin-bottom: 16px;
   }
   p {
-    font-size: 18px;
-    flex: 1;
+
   }
 </style>
