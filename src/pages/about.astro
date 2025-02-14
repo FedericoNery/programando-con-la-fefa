@@ -21,20 +21,22 @@ function calcularEdad(fechaNacimiento) {
 
 const fechaNacimiento = "1997-10-22"; 
 const cantidadAños = calcularEdad(fechaNacimiento)
+
+const baseUrl = import.meta.env.ASTRO_BASE;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <base href="/programando-con-la-fefa" />
+    <base href={baseUrl} />
   </head>
   <body>
     <Header />
     <main>
       <h1>Acerca de mi</h1>
       <div class="container">
-        <img src="/programando-con-la-fefa/about-me1.jpg" alt="Federico Nery en su viaje a España posando con una armadura de caballero decorada con Halloween" />
+        <img src={`${baseUrl}/about-me1.jpg`} alt="Federico Nery en su viaje a España posando con una armadura de caballero decorada con Halloween" />
         <p>
           Hola, soy Federico, tengo {cantidadAños} años.
           Soy desarrollador FullStack hace aproximadamente {new Date().getFullYear() - 2019} años y 

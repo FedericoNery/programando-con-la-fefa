@@ -12,6 +12,9 @@ const { Content: ContentImperativa } = await render(posts[0]);
 const { Content: ContentProgramacionOrientadaAObjetos } = await render(
   posts[1]
 );
+
+const baseUrl = import.meta.env.ASTRO_BASE;
+
 ---
 
 <BlogPost
@@ -19,7 +22,7 @@ const { Content: ContentProgramacionOrientadaAObjetos } = await render(
   description="Cursos para aprender programación imperativa y orientada a objetos"
   pubDate={new Date("January 18 2025")}
   updatedDate={new Date("January 29 2025")}
-  heroImage="/programando-con-la-fefa/blog-placeholder-python.jpg"
+  heroImage={`${baseUrl}/blog-placeholder-python.jpg`}
   heroWidth={400}
   heroHeight={200}
   hideImage={true}

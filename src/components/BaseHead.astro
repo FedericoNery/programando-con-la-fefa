@@ -12,6 +12,8 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+
+const baseUrl = import.meta.env.ASTRO_BASE;
 ---
 
 <!-- Global Metadata -->
@@ -21,8 +23,8 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href="/programando-con-la-fefa/fonts/RedditMono-Regular.ttf" as="font" type="font/ttf" crossorigin />
-<link rel="preload" href="/programando-con-la-fefa/fonts/RedditMono-Bold.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href={`${baseUrl}/fonts/RedditMono-Regular.ttf`} as="font" type="font/ttf" crossorigin />
+<link rel="preload" href={`${baseUrl}/fonts/RedditMono-Bold.ttf`} as="font" type="font/ttf" crossorigin />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -46,4 +48,4 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<base href="/programando-con-la-fefa" />
+<base href={baseUrl} />

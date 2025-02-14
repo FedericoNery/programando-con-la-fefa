@@ -7,7 +7,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://federiconery.github.io/',
-    base: '/programando-con-la-fefa',
+    site: process.env.ASTRO_SITE || 'https://federiconery.github.io/',
+    base: process.env.ASTRO_BASE || '/programando-con-la-fefa',
     integrations: [mdx(), sitemap(), tailwind()],
 });

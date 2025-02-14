@@ -5,8 +5,6 @@ pubDate: 'Jul 08 2022'
 heroImage: '/programando-con-la-fefa/blog-placeholder-3.jpg'
 ---
 
-# Programación Imperativa
-
 ## Contenido
 
 ### Introducción a la Programación

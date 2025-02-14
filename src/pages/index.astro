@@ -3,13 +3,16 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const baseUrl = import.meta.env.ASTRO_BASE;
+
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <base href="/programando-con-la-fefa" />
+    <base href={baseUrl} />
   </head>
   <body>
     <Header />

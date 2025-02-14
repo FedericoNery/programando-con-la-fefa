@@ -2,19 +2,21 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import ThemeToggleButton from "./ThemeToggleButton.astro";
+const baseUrl = import.meta.env.ASTRO_BASE;
+
+const aboutHref = `${baseUrl}/about`
+const pythonHref = `${baseUrl}/python`
 ---
 
 <header>
   <nav>
-    <h2><a href="/programando-con-la-fefa">{SITE_TITLE}</a></h2>
+    <h2><a href={baseUrl}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
-      <HeaderLink href="/programando-con-la-fefa">Inicio</HeaderLink>
+      <HeaderLink href={baseUrl}>Inicio</HeaderLink>
 <!--       <HeaderLink href="/programando-con-la-fefa/blog">Blog</HeaderLink>
- -->      <HeaderLink href="/programando-con-la-fefa/about">Acerca de mi</HeaderLink
-      >
-      <HeaderLink href="/programando-con-la-fefa/python"
-        >Python</HeaderLink
-      >
+ -->      
+      <HeaderLink href={aboutHref}>Acerca de mi</HeaderLink>
+      <HeaderLink href={pythonHref}>Python</HeaderLink>
     </div>
     <div class="container-buttons">
       <div class="action-buttons">
