@@ -99,6 +99,11 @@ const {
             <hr />
           </div>
           <slot />
+          <div class="donation">
+            <p class="donation-text"><b>Si la calidad del contenido cumplió con tus expectativas o si simplemente te sirvió para lo que buscabas, podés apoyarme acá </b>
+            <a class="cafecito-link" href='https://cafecito.app/federiconery' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_5.png 1x, https://cdn.cafecito.app/imgs/buttons/button_5_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_5_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_5.png' alt='Invitame un café en cafecito.app' /></a>
+          </p>
+          </div>
         </div>
       </article>
     </main>
@@ -109,5 +114,20 @@ const {
 <style>
   main {
     margin: auto !important;
+  }
+  .donation-text{
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+  .donation{
+    margin-top: 60px;
+    border: solid 1px var(--text-color);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .cafecito-link{
+    display: inline-block;
+    vertical-align: middle;
   }
 </style>

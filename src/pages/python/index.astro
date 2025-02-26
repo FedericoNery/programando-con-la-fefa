@@ -1,17 +1,21 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import { render } from "astro:content";
+import { type CollectionEntry, getCollection, getEntry } from "astro:content";
 import BlogPostPreview from "../../components/BlogPostPreview.astro";
 import BlogPost from "../../layouts/BlogPost.astro";
 
 type Props = CollectionEntry<"python">;
 
-const posts = await getCollection("python");
+async function buscarPostPorId(id) {
+  const entradas = await getCollection('python');
+  const post = entradas.find(entrada => entrada.id === id);
+  return post;
+}
 
-const { Content: ContentImperativa } = await render(posts[0]);
-const { Content: ContentProgramacionOrientadaAObjetos } = await render(
-  posts[1]
-);
+const rutaProgramacionEstructurada = 'programacion-estructurada';
+const rutaProgramacionOrientadaAObjetos = 'programacion-orientada-a-objetos';
+
+const indexProgramacionEstructurada = await buscarPostPorId(rutaProgramacionEstructurada);
+const indexProgramacionOrientadaAObjetos = await buscarPostPorId(rutaProgramacionOrientadaAObjetos);
 
 const baseUrl = import.meta.env.ASTRO_BASE;
 
@@ -36,11 +40,9 @@ const baseUrl = import.meta.env.ASTRO_BASE;
   </p>
 
   <div class="container">
-    <BlogPostPreview post={posts[1]} baseHref="/python"/>
-    <BlogPostPreview post={posts[0]} baseHref="/python"/>
+    <BlogPostPreview post={indexProgramacionEstructurada} baseHref="/python"/>
+    <BlogPostPreview post={indexProgramacionOrientadaAObjetos} baseHref="/python"/>
   </div>
-  <!-- <ContentImperativa />
-    <ContentProgramacionOrientadaAObjetos /> -->
 </BlogPost>
 
 <style>

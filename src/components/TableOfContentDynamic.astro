@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+
+const { collectionName, baseEntriesUrl, ...props } = Astro.props;
+
+const baseUrl = import.meta.env.BASE_URL
+const entradas = await getCollection(collectionName);
+const posts = entradas.filter(entrada => entrada.id.startsWith(`${baseEntriesUrl}/`));
+---
+
+<article>
+  <h2>Índice de Contenido</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Sección</th>
+        <th>Enlace</th>
+      </tr>
+    </thead>
+    <tbody>
+      {posts.map((post, index) => {
+        const nombre = post.data.title;  
+        console.log(post)
+        const enlace = `${baseUrl}/${collectionName}/${baseEntriesUrl}/${post.id.replace(`${baseEntriesUrl}/`, '')}`.replace('.mdx', '');
+        return (
+          <tr>
+            <td>{index + 1}</td>
+            <td><a href={enlace}>{nombre}</a></td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</article>
