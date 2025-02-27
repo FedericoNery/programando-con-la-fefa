@@ -6,11 +6,14 @@ const { collectionName, baseEntriesUrl, ...props } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL
 const entries = await getCollection(collectionName);
 const posts = entries.filter(entry => entry.id.startsWith(`${baseEntriesUrl}/`) && !entry.data.isDraft);
-console.log(posts)
+
 ---
 
 <article>
+  {posts.length > 0 ? 
+  <div>
   <h2>Índice de Contenido</h2>
+
   <table>
     <thead>
       <tr>
@@ -30,7 +33,10 @@ console.log(posts)
         );
       })}
     </tbody>
-  </table>
+  </table> 
+  </div>: 
+  <h2>😔 Lo siento... Pronto habrá contenido disponible 🫡</h2>
+}
 </article>
 
 <style>
