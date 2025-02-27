@@ -4,8 +4,9 @@ import { getCollection } from "astro:content";
 const { collectionName, baseEntriesUrl, ...props } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL
-const entradas = await getCollection(collectionName);
-const posts = entradas.filter(entrada => entrada.id.startsWith(`${baseEntriesUrl}/`));
+const entries = await getCollection(collectionName);
+const posts = entries.filter(entry => entry.id.startsWith(`${baseEntriesUrl}/`) && !entry.data.isDraft);
+console.log(posts)
 ---
 
 <article>
@@ -13,22 +14,49 @@ const posts = entradas.filter(entrada => entrada.id.startsWith(`${baseEntriesUrl
   <table>
     <thead>
       <tr>
-        <th>Sección</th>
-        <th>Enlace</th>
+        <th class="seccion-th">Sección</th>
+        <th class="enlace-th">Enlace</th>
       </tr>
     </thead>
     <tbody>
       {posts.map((post, index) => {
         const nombre = post.data.title;  
-        console.log(post)
         const enlace = `${baseUrl}/${collectionName}/${baseEntriesUrl}/${post.id.replace(`${baseEntriesUrl}/`, '')}`.replace('.mdx', '');
         return (
           <tr>
-            <td>{index + 1}</td>
-            <td><a href={enlace}>{nombre}</a></td>
+            <td class="seccion">{index + 1}</td>
+            <td class="enlace-td"><a href={enlace}>{nombre}</a></td>
           </tr>
         );
       })}
     </tbody>
   </table>
 </article>
+
+<style>
+  table {
+    border: solid 1px var(--text-color);
+    border-radius: 5px;
+    border-collapse: unset;
+  }
+
+  .seccion-th{
+    display: flex;
+    justify-content: center;
+  }
+  .enlace-th{
+    padding-left: 4px;
+  }
+  .enlace-td{
+    padding-left: 4px;
+  }
+
+  tr th{
+    color: var(--accent);
+  }
+  .seccion{
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+  }
+</style>

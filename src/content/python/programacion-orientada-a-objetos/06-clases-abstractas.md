@@ -1,5 +1,6 @@
 ---
 title: 'Clases abstractas'
-description: 'Introducción a la Programación estructurada'
+description: 'Clases abstractas'
 pubDate: 'Jul 08 2022'
+isDraft: true
 ---

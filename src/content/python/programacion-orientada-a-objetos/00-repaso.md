@@ -1,5 +1,6 @@
 ---
 title: 'Repaso Programación Estructurada'
-description: 'Introducción a la Programación estructurada'
+description: 'Repaso Programación Estructurada'
 pubDate: 'Jul 08 2022'
+isDraft: true
 ---

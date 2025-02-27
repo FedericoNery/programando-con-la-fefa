@@ -1,5 +1,6 @@
 ---
 title: 'Mensajes y componentes'
-description: 'Introducción a la Programación estructurada'
+description: 'Mensajes y componentes'
 pubDate: 'Jul 08 2022'
+isDraft: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: 'Herencia múltiple'
-description: 'Introducción a la Programación estructurada'
+description: 'Herencia múltiple'
 pubDate: 'Jul 08 2022'
+isDraft: true
 ---

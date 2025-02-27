@@ -1,5 +1,6 @@
 ---
 title: 'Herencia'
-description: 'Introducción a la Programación estructurada'
+description: 'Herencia'
 pubDate: 'Jul 08 2022'
+isDraft: true
 ---

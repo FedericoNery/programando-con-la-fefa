@@ -1,5 +1,6 @@
 ---
 title: 'Clases y objetos'
-description: 'Introducción a la Programación estructurada'
+description: 'Clases y objetos'
 pubDate: 'Jul 08 2022'
+isDraft: true
 ---
