@@ -2,7 +2,8 @@
 title: 'Funciones'
 description: 'Introducción a la Programación estructurada'
 pubDate: 'Jul 08 2022'
-heroImage: '/programando-con-la-fefa/blog-placeholder-3.jpg'
+#heroImage: '/programando-con-la-fefa/blog-placeholder-3.jpg'
+heroImage: '/blog-placeholder-3.jpg'
 ---
 
 ### Funciones
