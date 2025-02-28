@@ -6,13 +6,14 @@ const baseUrl = import.meta.env.ASTRO_BASE;
 
 const aboutHref = `${baseUrl}/about`
 const pythonHref = `${baseUrl}/python`
+const homeHref = baseUrl.length === 0 ? "/" : baseUrl
 ---
 
 <header>
   <nav>
-    <h2><a href={baseUrl}>{SITE_TITLE}</a></h2>
+    <h2><a href={homeHref}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
-      <HeaderLink href={baseUrl}>Inicio</HeaderLink>
+      <HeaderLink href={homeHref}>Inicio</HeaderLink>
 <!--       <HeaderLink href="/programando-con-la-fefa/blog">Blog</HeaderLink>
  -->      
       <HeaderLink href={aboutHref}>Acerca de mi</HeaderLink>
