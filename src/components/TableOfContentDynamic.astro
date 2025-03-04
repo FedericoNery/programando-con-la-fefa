@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 const { collectionName, baseEntriesUrl, ...props } = Astro.props;
 
-const baseUrl = import.meta.env.BASE_URL
+const baseUrl = import.meta.env.ASTRO_SITE
 const entries = await getCollection(collectionName);
 const posts = entries.filter(entry => entry.id.startsWith(`${baseEntriesUrl}/`) && !entry.data.isDraft);
 
@@ -24,7 +24,7 @@ const posts = entries.filter(entry => entry.id.startsWith(`${baseEntriesUrl}/`) 
     <tbody>
       {posts.map((post, index) => {
         const nombre = post.data.title;  
-        const enlace = `${baseUrl}/${collectionName}/${baseEntriesUrl}/${post.id.replace(`${baseEntriesUrl}/`, '')}`.replace('.mdx', '');
+        const enlace = `${baseUrl}${collectionName}/${baseEntriesUrl}/${post.id.replace(`${baseEntriesUrl}/`, '')}`.replace('.mdx', '');
         return (
           <tr>
             <td class="seccion">{index + 1}</td>
