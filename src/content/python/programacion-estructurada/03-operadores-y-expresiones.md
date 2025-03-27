@@ -1,7 +1,7 @@
 ---
 title: 'Operadores y expresiones'
 description: 'Introducción a la Programación estructurada'
-pubDate: 'Jul 08 2022'
+pubDate: 'Mar 27 2025'
 #heroImage: '/programando-con-la-fefa/blog-placeholder-3.jpg'
 heroImage: '/blog-placeholder-3.jpg'
 ---
@@ -11,3 +11,4 @@ El objetivo principal de esta sección es el de conocer los operadores (simbolos
 
 <a href="https://docs.google.com/presentation/d/1iquYQMjZyxwLTlMaLwtKEuR3KP8QpYUF2mKf3LW7HDc/" target="_blank">Presentacion</a>
 <a href="https://docs.google.com/document/d/10GfwN8udOJed9mhGdwEieOi0oRcbWNyb9ZQIflIpx6g/" target="_blank">Apunte</a>
+- <a href="" target="_blank"></a>

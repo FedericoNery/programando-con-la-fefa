@@ -1,6 +1,6 @@
 ---
 title: 'Clases y objetos'
 description: 'Clases y objetos'
-pubDate: 'Jul 08 2022'
+pubDate: 'Mar 27 2025'
 isDraft: true
 ---

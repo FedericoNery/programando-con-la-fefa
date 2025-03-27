@@ -1,7 +1,8 @@
 ---
 title: 'Introducción a la Programación Estructurada'
 description: 'Introducción a la Programación estructurada'
-pubDate: 'Jul 08 2022'
+pubDate: 'Mar 27 2025'
+hideImage: true
 ---
 
 ### Introducción a la Programación

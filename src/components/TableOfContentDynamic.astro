@@ -5,8 +5,8 @@ const { collectionName, baseEntriesUrl, ...props } = Astro.props;
 
 const baseUrl = import.meta.env.ASTRO_SITE
 const entries = await getCollection(collectionName);
-const posts = entries.filter(entry => entry.id.startsWith(`${baseEntriesUrl}/`) && !entry.data.isDraft);
-
+const posts = entries.filter(entry => entry.id.startsWith(`${baseEntriesUrl}/`) && !entry.data.isDraft)
+.sort((a,b) => a.id.replace(`${baseEntriesUrl}/`, '') < b.id.replace(`${baseEntriesUrl}/`, '') ? -1 : 1);
 ---
 
 <article>
